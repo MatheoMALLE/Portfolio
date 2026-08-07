@@ -21,7 +21,7 @@ export default function Experience() {
 
         <ol className={styles.timeline}>
           {experiences.map((exp, i) => (
-            <FadeUp key={exp.company} delay={i * 0.1}>
+            <FadeUp key={exp.role} delay={i * 0.1}>
               <li className={styles.item}>
                 <motion.span
                   className={styles.marker}
