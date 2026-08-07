@@ -1,0 +1,142 @@
+.header {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--content-padding-inline);
+  transition: background-color var(--transition-base), border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.headerScrolled {
+  background: rgb(255 255 255 / 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgb(23 82 232 / 0.08);
+  box-shadow: 0 1px 24px rgb(23 82 232 / 0.06);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+  transition: color var(--transition-base);
+}
+
+.logoScrolled {
+  composes: logo;
+  color: var(--color-navy);
+}
+
+.logoDot {
+  color: var(--color-blue);
+}
+
+.links {
+  display: none;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.link {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: rgb(255 255 255 / 0.8);
+  transition: color var(--transition-fast);
+}
+.link:hover {
+  color: var(--color-blue);
+}
+
+.linkScrolled {
+  composes: link;
+  color: var(--color-navy-70);
+}
+.linkScrolled:hover {
+  color: var(--color-blue);
+}
+
+.cta {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  background: rgb(255 255 255 / 0.15);
+  border: 1px solid rgb(255 255 255 / 0.25);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.ctaScrolled {
+  composes: cta;
+  background: var(--color-blue);
+  border-color: transparent;
+}
+.ctaScrolled:hover {
+  background: var(--color-blue-hover);
+}
+
+.menuButton {
+  color: var(--color-white);
+  display: inline-flex;
+  transition: color var(--transition-base);
+}
+
+.menuButtonScrolled {
+  composes: menuButton;
+  color: var(--color-navy);
+}
+
+.mobilePanel {
+  position: fixed;
+  top: 4rem;
+  inset-inline: 0;
+  background: rgb(255 255 255 / 0.98);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgb(23 82 232 / 0.08);
+  padding: var(--space-6) var(--content-padding-inline);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.mobileLink {
+  color: var(--color-navy-70);
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.mobileCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-blue);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .links,
+  .cta {
+    display: inline-flex;
+  }
+  .menuButton,
+  .menuButtonScrolled {
+    display: none;
+  }
+}

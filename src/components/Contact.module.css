@@ -1,0 +1,41 @@
+.section {
+  composes: fullSection from "../styles/shared.module.css";
+  background: var(--color-white);
+}
+
+.container {
+  max-width: var(--content-max-width-narrow);
+  margin-inline: auto;
+  padding-inline: var(--content-padding-inline);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: var(--space-6);
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.08;
+}
+
+.description {
+  margin-bottom: var(--space-12);
+  margin-inline: auto;
+  max-width: 28rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-navy-70);
+}
+
+.emailButton {
+  margin-bottom: var(--space-14);
+  font-size: 1rem;
+  padding: 0.9375rem 2.25rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}

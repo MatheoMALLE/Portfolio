@@ -1,0 +1,7 @@
+/*
+  Import client-side des polices de la maquette. Contrairement à
+  next/font/google, cet @import est résolu par le navigateur de la personne
+  qui visite le site — il fonctionne donc même dans les environnements de
+  build sans accès à fonts.googleapis.com.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap");

@@ -1,0 +1,133 @@
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: var(--color-white);
+  background: linear-gradient(175deg, var(--color-blue-dark) 0%, var(--color-blue) 55%, var(--color-blue) 100%);
+}
+
+.dotGrid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgb(255 255 255 / 0.1) 1.5px, transparent 1.5px);
+  background-size: 48px 48px;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ringLarge {
+  composes: ring;
+  width: 520px;
+  height: 520px;
+  top: -12%;
+  right: -8%;
+  border: 1px solid rgb(255 255 255 / 0.07);
+  background: rgb(255 255 255 / 0.025);
+}
+
+.ringMedium {
+  composes: ring;
+  width: 300px;
+  height: 300px;
+  top: 8%;
+  right: 6%;
+  border: 1px solid rgb(255 255 255 / 0.05);
+}
+
+.ringSmall {
+  composes: ring;
+  width: 400px;
+  height: 400px;
+  bottom: -10%;
+  left: -6%;
+  border: 1px solid rgb(255 255 255 / 0.05);
+  background: rgb(255 255 255 / 0.015);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  padding-inline: var(--content-padding-inline);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-10);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(255 255 255 / 0.85);
+  background: rgb(255 255 255 / 0.1);
+  border: 1px solid rgb(255 255 255 / 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.badgeDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-green);
+  box-shadow: 0 0 8px var(--color-green);
+}
+
+.title {
+  margin-bottom: var(--space-6);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.titleMuted {
+  color: rgb(255 255 255 / 0.45);
+}
+
+.subtitle {
+  margin-bottom: var(--space-12);
+  max-width: 36rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.65;
+  color: rgb(255 255 255 / 0.68);
+}
+
+.subtitleStrong {
+  color: rgb(255 255 255 / 0.95);
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(255 255 255 / 0.35);
+}

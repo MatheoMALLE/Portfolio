@@ -1,0 +1,109 @@
+.section {
+  composes: fullSection from "../styles/shared.module.css";
+  background: var(--color-white);
+}
+
+.grid {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding-inline);
+  display: grid;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.photoWrap {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.photo {
+  position: relative;
+  width: 18rem;
+  height: 20rem;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #eef3ff;
+}
+
+.statCard {
+  position: absolute;
+  bottom: -1.25rem;
+  right: -1.25rem;
+  border-radius: var(--radius-xl);
+  padding: 0.875rem 1.25rem;
+  background: var(--color-white);
+  border: 1px solid rgb(23 82 232 / 0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.statCardValue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: var(--color-blue);
+}
+
+.statCardLabel {
+  margin-top: 0.125rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-navy-70);
+}
+
+.body {
+  margin-top: var(--space-5);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-navy-70);
+}
+
+.bodySecond {
+  composes: body;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-10);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.statItem {
+  padding-left: var(--space-4);
+  border-left: 2px solid rgb(23 82 232 / 0.2);
+}
+
+.statItemValue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: var(--color-navy);
+}
+
+.statItemLabel {
+  margin-top: var(--space-1);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-navy-40);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-24);
+  }
+
+  .photoWrap {
+    margin-inline: 0;
+  }
+
+  .photo {
+    width: 20rem;
+    height: 24rem;
+  }
+}

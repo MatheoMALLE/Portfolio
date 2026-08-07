@@ -1,0 +1,30 @@
+.footer {
+  width: 100%;
+  padding: 0 2.5rem 1.25rem;
+  background: #f6f9ff;
+}
+
+.footerBar {
+  max-width: var(--content-max-width);
+  margin: var(--space-24) auto 0;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-navy-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--color-navy-40);
+}
+
+.footerBar span {
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .footerBar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

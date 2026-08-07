@@ -1,0 +1,135 @@
+/*
+  Classes partagées entre plusieurs sections. Les composants qui en ont
+  besoin importent ce module en plus du leur :
+  import shared from "@/styles/shared.module.css".
+*/
+
+.container {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding-inline);
+  width: 100%;
+}
+
+.containerNarrow {
+  max-width: var(--content-max-width-narrow);
+  margin-inline: auto;
+  padding-inline: var(--content-padding-inline);
+  width: 100%;
+}
+
+/*
+  Chaque section principale occupe au minimum toute la hauteur de l'écran
+  et centre son contenu verticalement — "chaque page prend la superficie
+  entière de l'écran" comme demandé.
+*/
+.fullSection {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--section-padding-block);
+}
+
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  font-family: var(--font-body);
+}
+
+.eyebrowOnDark {
+  composes: eyebrow;
+  color: var(--color-on-blue-55);
+}
+
+.sectionTitle {
+  margin-top: var(--space-3);
+  font-size: clamp(2rem, 1.6rem + 2vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+}
+
+.sectionTitleOnDark {
+  composes: sectionTitle;
+  color: var(--color-white);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-body);
+  background: #eef3ff;
+  border: 1px solid rgb(23 82 232 / 0.12);
+  color: var(--color-blue);
+}
+
+.tagOnDark {
+  composes: tag;
+  background: rgb(255 255 255 / 0.11);
+  border-color: rgb(255 255 255 / 0.16);
+  color: var(--color-on-blue-85);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  font-family: var(--font-body);
+  padding: 0.75rem 1.75rem;
+  border: 1px solid transparent;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast),
+    color var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.buttonPrimaryOnDark {
+  composes: button;
+  background: var(--color-white);
+  color: var(--color-blue);
+}
+.buttonPrimaryOnDark:hover {
+  transform: translateY(-1px);
+}
+
+.buttonGhostOnDark {
+  composes: button;
+  background: rgb(255 255 255 / 0.1);
+  color: var(--color-white);
+  border-color: rgb(255 255 255 / 0.22);
+}
+.buttonGhostOnDark:hover {
+  background: rgb(255 255 255 / 0.18);
+}
+
+.buttonPrimary {
+  composes: button;
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+.buttonPrimary:hover {
+  background: var(--color-blue-hover);
+}
+
+.buttonOutline {
+  composes: button;
+  padding: 0.625rem 1.375rem;
+  font-weight: 500;
+  background: transparent;
+  color: var(--color-navy-55);
+  border-color: rgb(23 82 232 / 0.2);
+}
+.buttonOutline:hover {
+  color: var(--color-blue);
+  border-color: rgb(23 82 232 / 0.53);
+}
