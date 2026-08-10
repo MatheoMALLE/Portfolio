@@ -1,6 +1,8 @@
+
 .section {
-  composes: fullSection from "../styles/shared.module.css";
-  background: var(--color-blue);
+  background: var(--color-blue);;
+  padding: 80px 0 100px;
+  color: white;
 }
 
 .container {
@@ -10,115 +12,177 @@
 }
 
 .header {
+  text-align: center;
   margin-bottom: var(--space-20);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.title {
+  margin: 0 0 52px;
+  max-width: 400px;
+  font-size: clamp(42px, 5vw, 58px);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
 .grid {
   display: grid;
-  gap: var(--space-6);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grid > * {
+  min-width: 0;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background: rgb(255 255 255 / 0.08);
-  border: 1px solid rgb(255 255 255 / 0.13);
-  backdrop-filter: blur(8px);
-}
-
-.imageWrap {
   position: relative;
-  height: 12rem;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: rgb(255 255 255 / 0.05);
+  border-radius: 17px;
+  background: #111;
+  text-decoration: none;
+  color: white;
 }
 
-.imageWrap img {
+.image {
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.card:hover .imageWrap img {
-  transform: scale(1.06);
+.card:hover .image {
+  transform: scale(1.04);
 }
 
-.body {
+.overlay {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: var(--space-6);
+  justify-content: flex-end;
+  padding: 22px;
+  opacity: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    transparent 75%
+  );
+  transition: opacity 0.3s ease;
 }
 
-.title {
-  margin-bottom: var(--space-2);
-  font-family: var(--font-display);
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlayTitle {
+  margin-bottom: 10px;
+  font-size: 20px;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--color-white);
+  line-height: 1.1;
 }
 
-.description {
-  flex: 1;
-  margin-bottom: var(--space-4);
-  font-family: var(--font-body);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: rgb(255 255 255 / 0.65);
-}
-
-.tags {
+.overlayTags {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-bottom: var(--space-5);
+  gap: 6px;
+  margin-bottom: 16px;
 }
 
-.links {
+.overlayTag {
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  font-size: 11px;
+  line-height: 1;
+}
+
+.overlayLink {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: 9px;
+  font-size: 12px;
 }
 
-.primaryLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-white);
-  transition: opacity var(--transition-fast);
-}
-.primaryLink:hover {
-  opacity: 0.7;
-}
-
-.divider {
-  color: rgb(255 255 255 / 0.2);
-}
-
+.primaryLink,
 .secondaryLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  color: rgb(255 255 255 / 0.55);
-  transition: opacity var(--transition-fast);
+  gap: 5px;
+  color: white;
+  text-decoration: none;
 }
-.secondaryLink:hover {
+
+.primaryLink {
+  font-weight: 600;
+}
+
+.secondaryLink {
   opacity: 0.8;
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.divider {
+  opacity: 0.4;
+}
+/*
+.stretchedLink {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
-@media (min-width: 1024px) {
+.secondaryLink {
+  position: relative;
+  z-index: 2;
+}
+*/
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0 80px;
+  }
+
+  .container {
+    width: min(100% - 32px, 854px);
+  }
+
+  .title {
+    margin-bottom: 36px;
+  }
+
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .overlay {
+    opacity: 1;
+  }
+
+  .image {
+    transform: none;
+  }
+
+  .card:hover .image {
+    transform: none;
   }
 }

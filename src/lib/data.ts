@@ -77,89 +77,84 @@ export const experiences = [
 ];
 
 export const projects = [
-
-
-
-
   {
-    title: "Projet Java",
+    title: "CyBreathe",
     description:
-      "Outil CLI open-source pour scaffolder des projets React/Next.js. Configuration TypeScript, ESLint et tests inclus. 2k+ stars GitHub.",
+      "Simulation de la propagation de la polution et de l'impact des diférente forme d'urbanisme sur celle-ci",
     image:
-      "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["Node.js", "TypeScript", "CLI", "Open Source"],
+      "/CyBreathe.png",
+    tags: ["Java","JavaFX", "Gradle"],
     href: "#",
-    repo: "#",
+    repo: "",
   },
   {
     title: "Conception d'un processeur",
     description:
-      "E-commerce headless pour une maison d'édition parisienne. Paiement Stripe, CMS Sanity, edge caching — Lighthouse 98/100.",
+      "Conception des différentes parties d’un processeur sur logisim",
     image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["Next.js", "Sanity", "Stripe", "Tailwind"],
+      "/Conception d'un processeur.png",
+    tags: ["processeur", "logisim"],
     href: "#",
-    repo: "#",
+    repo: "https://github.com/MatheoMALLE/Conception-et-Simulation-d-un-Processeur",
+  },
+  {
+    title: "CyNapse",
+    description:
+      "Création d’un site modélisant un bâtiment de l’école et permettant de gérer l’ensemble des appareils informatique connectés.",
+    image:
+      "/CyNapse.png",
+    tags: ["React", "Spring", "MariaDB", "Tailwind css","vitejs"],
+    href: "#",
+    repo: "",
   },
   {
     title: "Portfolio",
     description:
-      "Tableau de bord analytics B2B avec graphiques temps-réel, gestion d'équipes et exports PDF. 0 à 10 000 utilisateurs en 6 mois.",
+      "site de présentation de mes projets et compétences.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["React", "TypeScript", "D3.js", "Node.js"],
+      "/Portfolio.png",
+    tags: ["Next.js", "TypeScript", "npm"],
     href: "#",
-    repo: "#",
+    repo: "https://github.com/MatheoMALLE/Portfolio",
   },
   {
     title: "Coin-Rush",
     description:
-      "E-commerce headless pour une maison d'édition parisienne. Paiement Stripe, CMS Sanity, edge caching — Lighthouse 98/100.",
+      "Développement d'un jeu vidéo 2D de type dungeon crawler avec exploration de donjons et système de combats au tour par tour",
     image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["Next.js", "Sanity", "Stripe", "Tailwind"],
+      "/Coin-Rush.png",
+    tags: ["Java","JavaFX"],
     href: "#",
-    repo: "#",
-  },
-  {
-    title: "gestionnaire d'évènements (LesToiles de Minuit)",
-    description:
-      "E-commerce headless pour une maison d'édition parisienne. Paiement Stripe, CMS Sanity, edge caching — Lighthouse 98/100.",
-    image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["Next.js", "Sanity", "Stripe", "Tailwind"],
-    href: "#",
-    repo: "#",
+    repo: "https://github.com/MatheoMALLE/Coin-Rush",
   },
  {
     title: "projet-c-wire",
     description:
-      "E-commerce headless pour une maison d'édition parisienne. Paiement Stripe, CMS Sanity, edge caching — Lighthouse 98/100.",
+      "simulation de gestion du réseaux éléctrique français. Optimisation des flux et filtrage de données.",
     image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["Next.js", "Sanity", "Stripe", "Tailwind"],
+      "/projet-c-wire.png",
+    tags: ["C", "Shell", "Gnuplot"],
     href: "#",
-    repo: "#",
+    repo: "https://github.com/MatheoMALLE/projet-c-wire",
   },
  {
     title: "ramsauer-townsend-effect",
     description:
-      "E-commerce headless pour une maison d'édition parisienne. Paiement Stripe, CMS Sanity, edge caching — Lighthouse 98/100.",
+      "Physique quandtique. Simulation de l'effet Ramsauer-Townsend et étude des paquets d'ondes.",
     image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["Next.js", "Sanity", "Stripe", "Tailwind"],
+      "/ramsauer-townsend-effect.png",
+    tags: ["python","physique théorique"],
     href: "#",
-    repo: "#",
+    repo: "https://github.com/MatheoMALLE/ramsauer-townsend-effect",
   },
   {
     title: "Cosmic-Yonder",
     description:
-      "E-commerce headless pour une maison d'édition parisienne. Paiement Stripe, CMS Sanity, edge caching — Lighthouse 98/100.",
+      "Création d'un jeu vidéo de type Rogue-Lite généré procéduralement",
     image:
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=500&fit=crop&auto=format&q=80",
-    tags: ["Next.js", "Sanity", "Stripe", "Tailwind"],
+      "/Cosmic-Yonder.png",
+    tags: ["C"],
     href: "#",
-    repo: "#",
+    repo: "https://github.com/MatheoMALLE/Cosmic-Yonder",
   },
-
 ];
