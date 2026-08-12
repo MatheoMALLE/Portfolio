@@ -8,9 +8,6 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/footer";
 
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-
 const BLUE = "var(--color-blue)";
 const WHITE = "var(--color-white)";
 
