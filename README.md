@@ -1,35 +1,47 @@
 # Portfolio — Mathéo Malle
 
-Portfolio professionnel de **Mathéo Malle**, étudiant ingénieur informatique à CY Tech (Cergy), construit avec **Next.js 16 (App Router)**, **TypeScript**, du **CSS pur (CSS Modules)** et **Framer Motion** pour les animations. Le site présente son parcours, ses compétences et ses projets, avec une maquette soignée (vagues animées entre les sections, anneaux flottants dans le hero, révélations au scroll), chaque section principale occupant toute la hauteur de l'écran.
+Creation of my portfolio, built using **Next.js** for the animations.
+The site showcases my background, my skills, and my projects.
 
-🔗 **Démo en ligne :** [portfolio-matheo8.vercel.app](https://portfolio-matheo8.vercel.app)
-
-## 🧭 Contenu du site
-
-- **À propos** — présentation, parcours et statistiques (projets suivis, années d'expérience, mois en entreprise)
-- **Compétences** — organisées par catégorie : Programming, Web Development, Data & Databases, DevOps, Tools, Design
-- **Expérience professionnelle** — postes occupés (IA/Web développeur, Président et Responsable du suivi des études chez CY Junior Engineering)
-- **Projets réalisés** — sélection de projets avec liens vers les dépôts GitHub (CyBreathe, Conception d'un processeur, CyNapse, Coin-Rush, C-Wire, Ramsauer-Townsend Effect, Cosmic-Yonder...)
-- **Contact** — formulaire de contact et liens vers GitHub / LinkedIn
+🔗 **The Online Demo:** [portfolio-matheo8.vercel.app](https://portfolio-matheo8.vercel.app)
 
 ## 🛠️ Roadmap
-
-- mise en place du projet Next.js (App Router) et de la structure de base
-- intégration du design system (tokens de couleurs, typographies, espacements)
-- développement des sections plein écran (Hero, About, Skills, Experience, Projects, Contact)
-- ajout des animations (Framer Motion) et des révélations au scroll
-- ajout des vagues animées de transition entre les sections
-- déploiement sur Vercel
+- Setting up the Next.js project (App Router) and the basic structure
+- Integrating the system design (color tokens, fonts, spacing)
+- Developing the sections (Hero, About, Skills, Experience, Projects, Contact)
+- Adding animations and scroll-based reveal effects
+- Deploying to Vercel
 
 ## 🧰 Skills required
-
 - Next.js / React
 - TypeScript
 - CSS Modules
 - Framer Motion
 
-## 📁 Structure du projet
+## 🧭 Site Content
+- **About** — introduction, background, and statistics (projects worked on, years of experience, months at companies)
+- **Skills** — organized by category: Programming, Web Development, Data & Databases, DevOps, Tools, Design
+- **Professional Experience** — positions held (AI/Web Developer, President and Head of Academic Monitoring at CY Junior Engineering)
+- **Completed Projects** — selection of projects with links to GitHub repositories
+- **Contact** — contact form and links to social media
+---
+## 📖 Documentation
+### Local Installation and Launch
+```bash
+npm install
+npm run dev
+```
+The site can then be accessed at [http://localhost:3000](http://localhost:3000).
 
+### Customize the Content
+All text (experience, skills, projects) is centralized in `src/lib/data.ts`.
+Images (profile photo, project screenshots) are hosted in `public/`.
+
+### Deployment
+1. Push the project to a GitHub repository.
+3. Each `git push` automatically redeploys the site to Vercel.
+
+## 📁 Project Structure
 ```
 src/
 ├── app/
@@ -54,41 +66,3 @@ src/
 └── lib/
     └── data.ts                       # tout le contenu texte du site
 ```
-
-## 📖 Documentation
-
-### Installation et lancement en local
-
-```bash
-npm install
-npm run dev
-```
-
-Le site est ensuite accessible sur [http://localhost:3000](http://localhost:3000).
-
-### Philosophie CSS
-
-Le style est complètement séparé du JSX : pas de classes utilitaires dans le markup, uniquement des classes sémantiques importées depuis un fichier `.module.css` dédié à chaque composant.
-
-- `src/styles/tokens.css` : variables globales (couleurs, polices, espacements) — modifier ici change tout le site.
-- `src/app/globals.css` : reset navigateur et styles de base des balises HTML.
-- `src/styles/shared.module.css` : classes communes à plusieurs sections.
-- `ComponentName.module.css` : styles propres à un composant, scopés automatiquement par Next.js.
-
-### Personnaliser le contenu
-
-Tout le texte (expériences, compétences, projets) est centralisé dans `src/lib/data.ts`. Les images de démonstration (photo de profil, captures d'écran de projets) sont à remplacer par les visuels réels, hébergés dans `public/`.
-
-### Déploiement
-
-1. Pousser le projet sur un dépôt GitHub.
-2. Importer le dépôt sur [vercel.com](https://vercel.com) — Vercel détecte automatiquement Next.js.
-3. Chaque `git push` redéploie automatiquement le site.
-
-## 👤 Auteur
-
-**Mathéo Malle** — Étudiant ingénieur informatique, CY Tech (Cergy)
-
-- GitHub : [MatheoMALLE](https://github.com/MatheoMALLE)
-- LinkedIn : [mathéo-malle](https://www.linkedin.com/in/math%C3%A9o-malle/)
-- Email : [matheo.malle@gmail.com](mailto:matheo.malle@gmail.com)
