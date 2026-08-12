@@ -3,6 +3,9 @@ import "@/styles/tokens.css";
 import "@/styles/fonts.css";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 export const metadata: Metadata = {
   title: "Mathéo Malle — Ingénieur informatique",
   description:

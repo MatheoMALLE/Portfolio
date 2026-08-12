@@ -113,7 +113,7 @@ export const projects = [
       "site de présentation de mes projets et compétences.",
     image:
       "/Portfolio.png",
-    tags: ["Next.js", "TypeScript", "npm"],
+    tags: ["Next.js", "TypeScript", "Vercel","npm"],
     href: "#",
     repo: "https://github.com/MatheoMALLE/Portfolio",
   },
@@ -142,7 +142,7 @@ export const projects = [
     description:
       "Physique quandtique. Simulation de l'effet Ramsauer-Townsend et étude des paquets d'ondes.",
     image:
-      "/ramsauer-townsend-effect.png",
+      "/ramsauer-townsend-effect.gif",
     tags: ["python","physique théorique"],
     href: "#",
     repo: "https://github.com/MatheoMALLE/ramsauer-townsend-effect",
