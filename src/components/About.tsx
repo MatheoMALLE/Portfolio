@@ -13,7 +13,7 @@ export default function About() {
             <div className={styles.photo}>
               <Image
                 src="/CV.png"
-                alt="Portrait de Théo Laurent, développeur full-stack basé à Paris"
+                alt="Portrait de Mathéo Malle, étudiant ingénieur informatique à CY Tech"
                 fill
                 sizes="(min-width: 768px) 20rem, 18rem"
                 style={{ objectFit: "cover" }}

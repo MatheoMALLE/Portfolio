@@ -7,9 +7,18 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "Mathéo Malle — Ingénieur informatique",
+  title: "Mathéo Malle — Ingénieur informatique | CY Tech",
   description:
-    "étudiant Ingénieur à CY Tech, Cergy. Freelance, je développe des solutions digitales pour les entreprises.",
+    "étudiant Ingénieur informatique à CY Tech, Cergy. Je développe des solutions digitales pour les entreprises en Freelance.",
+  keywords: [
+    "Mathéo Malle",
+    "ingénieur informatique",
+    "développeur web",
+    "développement logiciel",
+    "intelligence artificielle",
+    "CY Tech",
+    "freelance",
+  ],
 };
 
 export default function RootLayout({
